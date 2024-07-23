@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import TipKit
 
 @main
 struct BaseProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            Picker_VMPUIView()
+            //Picker_VMPUIView()
+            TipKitUIView()
+                .task {
+                    
+                    try? Tips.resetDatastore()
+                    
+                    try? Tips.configure([
+                        .displayFrequency(.immediate),
+                        .datastoreLocation(.applicationDefault)])
+                }
         }
+        
     }
 }
