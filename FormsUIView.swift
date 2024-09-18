@@ -15,11 +15,12 @@ struct FormsUIView: View {
     
     var body: some View {
         
-        NavigationStack {
+        //NavigationStack {
             
             Form {
                
-                Section("Main settings") {
+                //Section("Main settings") {
+                Section {
                     
                     Picker(selection: $selectedColor, label: Text("Select a color")) {
                         ForEach(0..<colors.count) { index in
@@ -40,7 +41,7 @@ struct FormsUIView: View {
                 }
             }
             .navigationBarTitle("Settings")
-        }
+        //}
         
     }
 }

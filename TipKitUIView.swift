@@ -33,7 +33,7 @@ struct TipKitUIView: View {
                         .frame(height: 100)
                         .contextMenu {
                             Button("Favorite", systemImage: "star") {
-                                Task { await SetFavoriteTip.setFavotiteEvent.donate() }
+                                //Task { await SetFavoriteTip.setFavotiteEvent.donate() }
                             }
                         }
                 }
@@ -60,7 +60,7 @@ struct TipKitUIView: View {
                 
             }
             .onAppear {
-                Task { await SetFavoriteTip.colorsViewVisitedEcent.donate() }
+                //Task { await SetFavoriteTip.colorsViewVisitedEcent.donate() }
             }
             .padding()
             .navigationTitle("Colors")
